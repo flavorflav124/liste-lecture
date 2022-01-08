@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 export const utiliserDB = async(operations, reponse) => {
     try{
         const client =  await MongoClient.connect('mongodb://localhost:27017');
-        const db = client.db('mon-blog');
+        const db = client.db('liste-lecture');
 
         await operations(db);
 
