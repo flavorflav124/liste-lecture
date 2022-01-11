@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import ListeMusical from '../composants/ListeMusical';
 
 //  affiche le répertoire (titre et artiste),
 // trié par catégorie. Pour chaque pièce,
@@ -17,7 +18,7 @@ export const Admin = () => {
     []);
     return (
         <>
-           <p>hello</p>
+           <ListeMusical repertoire = {listeMusical} />
         </>
     )
 }

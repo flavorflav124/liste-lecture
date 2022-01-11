@@ -1,13 +1,21 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import AfficherProduit from '../composants/AfficherProduit';
 
-export const Supprimer = () => {
 
-
-    
+function PageSupprimer({match}) {
+    const _id = match.params.id
     return (
         <>
-            <h1>Page d'accueil</h1>
-            <p>Playliste musical</p>
+        <AfficherProduit id = {_id} />
+        <Link to="/produits">
+            <Button variant={'danger'}> Annuler</Button>
+            
+        </Link>
         </>
     )
 }
+
+
+export default PageSupprimer;
